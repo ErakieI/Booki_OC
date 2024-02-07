@@ -112,6 +112,14 @@ nav a :hover {
 
 /****** infos-filtres ***********/
 
+.infos-filtres {
+    height: 281px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
 .localisation {
     width: 377px;
     height: 49px;
@@ -121,12 +129,18 @@ nav a :hover {
     border-radius: 15px;
 }
 
-.i.fa-solid.fa-location-dot ::before {
+.geoloc-icon {
     width: 50px;
     height: 49px;
-    border-radius: 15px 0 0 15px;
-    margin: auto;
-    border: 2px solid black;
+    border: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.geoloc-icon svg {
+    width: 14px;
+    height: 18px;
 }
 
 .city-input {
@@ -152,6 +166,50 @@ nav a :hover {
 
 .search-btn:hover {
     background-color: #0056b3;
+}
+
+.filters {
+    display: flex;
+    width: 758px;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: white;
+    border: 2px solid #D9D9D9;
+    padding: 20px;
+}
+
+.filter-btn h3 {
+    font-size: 0.9em;
+    padding-left: 10px;
+}
+
+.filters .filter-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(0deg, #DEEBFF, #DEEBFF), linear-gradient(0deg, #D9D9D9, #D9D9D9);
+}
+
+.nbHousing {
+    display: flex;
+    align-items: center;
+}
+
+.nbHousing .logo-i {
+    border-radius: 50%;
+    border: 1px solid #D9D9D9;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
 }
 
 /****** Hebergements And Populaires ***********/
