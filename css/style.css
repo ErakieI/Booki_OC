@@ -101,13 +101,14 @@ nav a {
 nav h2 {
     margin-top: 0;
     padding-top: 10px;
+    font-size: 16px;
 }
 
 nav a :hover {
-    color: blue;
-    border-top: 3px solid blue;
+    color: #0065FC;
+    border-top: 3px solid #0065FC;
     margin-top: 0;
-    padding-top: 10px;
+    padding-top: 7px;
 }
 
 /****** infos-filtres ***********/
@@ -164,7 +165,7 @@ nav a :hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .search-btn:hover {
@@ -173,10 +174,13 @@ nav a :hover {
 
 .filters {
     display: flex;
-    width: 60%;
+    width: 758px;
     height: 50px;
-    justify-content: space-between;
     margin: 20px 0;
+}
+
+button > .fa-solid {
+    padding-right: 10px;
 }
 
 .filters h2 {
@@ -185,10 +189,16 @@ nav a :hover {
     margin-right: 10px;
 }
 
+.filter-select {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
 .filter-btn {
     display: flex;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 17px;
     font-weight: 700;
     border-radius: 25px;
     background-color: white;
@@ -196,9 +206,8 @@ nav a :hover {
     padding: 20px;
 }
 
-.filter-btn h3 {
-    font-size: 0.9em;
-    padding-left: 10px;
+.filter-btn i.fa-solid {
+    font-size: 22px;
 }
 
 .filters .filter-btn:hover {
@@ -240,7 +249,8 @@ nav a :hover {
 }
 
 /****** Hebergements ***********/
-.hebergements {
+
+#hebergements {
     width: 65%;
 }
 
@@ -332,8 +342,12 @@ nav a :hover {
 
 /****** Activites ***********/
 
-.activites {
+#activites {
     padding: 30px;
+}
+
+#activites h2 {
+    font-size: 1.4em;
 }
 
 .lieux {
@@ -374,10 +388,6 @@ footer {
     margin-top: 30px;
 }
 
-footer h4 {
-    margin: 20px 0;
-}
-
 .footer-links {
     width: 33%;
     padding-left: 40px;
@@ -388,12 +398,60 @@ footer h4 {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    *{
+        margin: 0;
+    }
+
+    .main-container {
+        min-width: 320px;
+        max-width: 924px;
+        padding: 0 10px;
+    }
+
+    .filters {
+        width: 668px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding-bottom: 50px;
+    }
+
+    .filters h2 {
+        align-self: normal;
+        padding-bottom: 10px;
+    }
+
+    .filter-btn {
+        height: 50px;
+    }
+
+    .nbHousing p {
+        padding: 0;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
 
-    .hebergements {
+    .hebergements-and-populaires section {
+        padding: 25px 20px;
+    }
+
+    #hebergements {
         width: 100%;
+    }
+
+    .hebergements-cards {
+        padding-bottom: 20px;
+    }
+
+    .card-title {
+        padding: 5px 0;
+    }
+
+    p.card-subtitle {
+        padding-bottom: 5px;
     }
 
     .populaires {
@@ -408,19 +466,177 @@ footer h4 {
     }
 
     .populaires-cards a {
-        width: 30%;
+        width: 32%;
     }
 
     .populaires-cards .card-title {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .lieux-cards {
+        height: 270px;
+        justify-content: flex-start;
+    }
+
+    .lieux-content {
+        height: 70px;
+        display: flex;
+        align-items: center;
+    }
+
+    .lieux-cards img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .lieux-title {
+        padding-left: 20px;
+        font-size: 16px;
+    }
+
+    #activites h2 {
+        margin: 30px 0;
+    }
+
+    footer {
+        height: 163px;
+    }
+
+    .footer-links h2, p {
+        padding-top: 15px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+.main-container {
+    min-width: 320px;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 115px;
+}
+
+nav {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 20px;
+}
+
+nav a {
+    width: 50%;
+    text-align: center;
+    padding: 0;
+    border-bottom: 3px solid #F2F2F2;
+}
+
+nav a :hover {
+    color: #0065FC;
+    border-top: 0px;
+    border-bottom: 3px solid #0065FC;
+    padding-bottom: 14.5px;
+    padding-top: 10px;
+}
+
+.infos-filtres {
+    padding: 0 10px;
+}
+
+.filters{
+    width: 100%;
+}
+
+.filter-select {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.nbHousing {
+    margin-top: 70px;
+}
+
+.hebergements-and-populaires .populaires {
+    order: -1;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hebergements-and-populaires #hebergements {
+    background-color: white;
+}
+
+.populaires-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.populaires-cards .card {
+    margin-top: 15px;
+}
+
+.populaires-cards a {
+    width: 100%;
+}
+
+.hebergements-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.hebergements-cards a {
+    width: 100%;
+}
+
+.hebergements-cards .card {
+    margin-top: 15px;
+}
+
+#activites h2 {
+    margin: 10px 0;
+}
+
+.lieux {
+    display: flex;
+    flex-direction: column;
+}
+
+.lieux a {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.lieux img {
+    height: 140px;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links {
+    width: 100%;
+    margin: 10px 0;
+}
+
 }
