@@ -4,7 +4,7 @@
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
 }
 
 :root {
@@ -399,14 +399,11 @@ footer {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
-    *{
-        margin: 0;
-    }
-
     .main-container {
         min-width: 320px;
         max-width: 924px;
         padding: 0 10px;
+        margin: 0;
     }
 
     .filters {
@@ -635,7 +632,7 @@ footer {
 }
 
 .footer-links {
-    width: 100%;
+    width: auto;
     margin: 10px 0;
 }
 
